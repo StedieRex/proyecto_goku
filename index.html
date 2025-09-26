@@ -1,13 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dragon Ball API</title>
     <link rel="stylesheet" href="estilos.css">
-    <script src="script.js" defer></script>
 </head>
+
 <body>
-    
+    <div class="contenedor">
+        <!-- Sección Planeta -->
+        <div class="seccion planeta">
+            <h2>Planeta de Origen</h2>
+            <div class="imagenPlaneta" id="imagenPlaneta"></div>
+            <p class="nombre" id="nombrePlaneta">-</p>
+            <p class="descripcion" id="estadoPlaneta">-</p>
+        </div>
+
+        <!-- Sección Personaje -->
+        <div class="seccion personaje">
+            <h2>Personaje</h2>
+            <div class="buscador">
+                <input type="number" id="idPersonaje" min="1" max="58" placeholder="ID del personaje (1-58)">
+                <button onclick="buscarPersonaje()">Buscar</button>
+            </div>
+            <div class="imagenPersonaje" id="imagenPersonaje"></div>
+            <div class="informacion">
+                <p class="nombre" id="nombrePersonaje">-</p>
+                <p class="ki" id="kiPersonaje">KI: -</p>
+                <p class="gender" id="generoPersonaje">Género: -</p>
+                <p class="raza" id="razaPersonaje">Raza: -</p>
+            </div>
+        </div>
+
+        <!-- Sección Transformaciones -->
+        <div class="seccion tranformacion">
+            <h2>Transformaciones</h2>
+            <div class="imagenTransformacion" id="imagenTransformacion"></div>
+            <div class="transformacion-info">
+                <p class="nombre" id="nombreTransformacion">-</p>
+                <p id="kiTransformacion">KI: -</p>
+            </div>
+            <div class="botones">
+                <button onclick="transformacionAnterior()" id="btnAnterior">Anterior</button>
+                <span id="contadorTransformacion">0/0</span>
+                <button onclick="transformacionSiguiente()" id="btnSiguiente">Siguiente</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
